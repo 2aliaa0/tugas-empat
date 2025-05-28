@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahalini Concert</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%; /* Mengatur body untuk mengambil seluruh tinggi layar */
+    }
+
+    /* Menambahkan efek hover pada button */
+    button:hover {
+      transition: all 0.3s ease;
+      transform: scale(1.05);
+    }
+
+    /* Menambahkan background putih hanya untuk area tiket */
+    .ticket-container {
+      background-color: #ffffff !important; /* Background putih untuk tiket */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan ringan */
+      z-index: 10;
+    }
+
+    /* Mengatur gambar agar lebih responsif */
+    .ticket-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .ticket-image:hover {
+      transform: scale(1.05);
+    }
+
+    /* Mengatur container halaman supaya tetap di atas background gradasi */
+    .content-wrapper {
+      position: relative;
+      z-index: 5;
+    }
+
+    /* Mengatur section Home */
+    #home {
+      background: linear-gradient(to bottom, #f472b6 10%, #000000) !important;
+    }
+
+    /* Mengatur section About */
+    #about {
+      background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(196, 196, 196), rgb(244, 113, 178)) !important;
+    }
+
+    /* Mengatur section Ticket */
+    #ticket {
+      background: linear-gradient(to bottom, #f472b6, #ff61a6) !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-white">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-pink-400 bg-opacity-90 backdrop-blur-md flex justify-between items-center px-10 py-5 shadow-md">
+    <div class="flex items-center space-x-2">
+      <img src="gambar/logo konser.png" alt="Logo" class="w-8 h-8" />
+      <span class="text-black font-semibold">CONCERT TICKET</span>
+    </div>
+    <ul class="flex space-x-6 text-black font-medium">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#ticket">Ticket</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+  <a href="#home" class="bg-pink-300 hover:bg-pink-400 text-black font-semibold py-1 px-4 rounded-full">
+    Sign Up
+  </a>
+</li>
+
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-between px-40 py-1">
+    <div class="w-full md:w-1/2">
+      <img src="gambar/background home.png" alt="Mahalini" class="w-6/7 md:w-6/7 object-cover rounded-lg -mt-10" />
+    </div>
+    <div class="w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0 px-4">
+      <h1 class="text-3xl md:text-4xl font-bold text-black mb-4">Welcome to Mahalini concert website!!!</h1>
+      <p class="text-gray-200 mb-2">
+        We proudly present the most awaited Mahalini solo concert of the year!!<br>
+        Don't miss the chance to watch this concert!!
+      </p>
+      <p class="font-bold text-white mb-4">
+        Get your concert tickets now and enjoy an amazing concert experience!!!
+      </p>
+      <a href="#ticket" class="bg-pink-300 hover:bg-pink-400 text-black font-bold py-2 px-6 rounded-full">
+      Get Ticket
+      </a>  
+    </div>
+  </section>
+
+  <!-- Teks Mahalini di bawah gambar -->
+  <div class="text-center mt-[-100px] text-8xl font-bold tracking-widest text-pink-300 ml-[-460px]">
+    MAHALINI
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="px-8 py-24">
+    <h2 class="text-center text-5xl font-bold mb-14 text-white relative">
+      About Us
+      <div class="w-32 h-1 bg-pink-500 mx-auto mt-4"></div>
+    </h2>
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+     <!-- Text Content -->
+    <div class="pl-16">
+      <h3 class="text-4xl font-semibold text-black mb-2">Mahalini Concert</h3>
+      <p class="text-white mb-8 text-justify text-lg leading-relaxed">
+        "Mahalini Concert" is a celebration of music that brings fans together with Mahalini's distinctive and emotional voice. In this concert, the audience will be invited to experience Mahalini's musical journey from the beginning of her career to her latest meaningful works.
+      </p>
+      <p class="text-white text-justify text-lg leading-relaxed">
+        Get ready for a night full of love, laughter, and emotion with Mahalini, because every song has a story, and every audience is part of the story.
+      </p>
+    </div>
+
+    <!-- Images -->
+    <div class="relative flex justify-center md:justify-start">
+      <!-- Gambar pertama (kotak tanpa lengkungan) -->
+      <img src="gambar/about 1.jpeg" alt="Mahalini Singing"
+           class="w-44 md:w-52 shadow-2xl z-10 relative md:ml-[6.5rem] -top-16">
+
+      <!-- Gambar kedua (kotak tanpa lengkungan) -->
+      <img src="gambar/about 2.jpeg" alt="Mahalini Portrait"
+           class="w-48 md:w-56 shadow-2xl absolute bottom-[-120px] right-[2rem] z-20 hidden md:block md:mr-10">
+    </div>
+    </div>
+  </section>
+
+ <!-- Tickets Section -->
+<section id="ticket" class="max-w-7xl mx-auto py-12 px-8">
+  <h1 class="text-4xl font-bold text-center text-white-800 mt-20 mb-14">Ticket</h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+    <!-- Tiket 1 -->
+    <div class="text-center mt-4">
+      <img src="gambar/tiket vip.jpeg" alt="Tiket VIP"
+           class="mx-auto w-full h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      <div class="mt-6">
+        <h2 class="text-lg font-semibold text-gray-800">Ticket VIP</h2>
+        <p class="text-gray-600">$ 1.200,000</p>
+      </div>
+    </div>
+
+    <!-- Tiket 2 -->
+    <div class="text-center mt-4">
+      <img src="gambar/tiket standar.jpeg" alt="Tiket Gold"
+           class="mx-auto w-full h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      <div class="mt-6">
+        <h2 class="text-lg font-semibold text-gray-800">Ticket Standar</h2>
+        <p class="text-gray-600">$ 300.000</p>
+      </div>
+    </div>
+
+    <!-- Tiket 3 -->
+    <div class="text-center mt-4">
+      <img src="gambar/tiket early bird.jpeg" alt="Tiket VIP"
+           class="mx-auto w-full h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      <div class="mt-6">
+        <h2 class="text-lg font-semibold text-gray-800">Ticket Early Bird</h2>
+        <p class="text-gray-600">$ 200.000</p>
+      </div>
+    </div>
+
+    <!-- Tiket 4 -->
+    <div class="text-center mt-4">
+      <img src="gambar/tiket reguler.jpeg" alt="Tiket Reguler A"
+           class="mx-auto w-full h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      <div class="mt-6">
+        <h2 class="text-lg font-semibold text-gray-800">Ticket Reguler</h2>
+        <p class="text-gray-600">$ 250.000</p>
+      </div>
+    </div>
+
+    <!-- Tiket 5 -->
+    <div class="text-center mt-4">
+      <img src="gambar/tiket bar.jpeg" alt="Tiket Reguler B"
+           class="mx-auto w-full h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      <div class="mt-6">
+        <h2 class="text-lg font-semibold text-gray-800">Ticket Bar</h2>
+        <p class="text-gray-600">$ 900.000</p>
+      </div>
+    </div>
+
+    <!-- Tiket 6 -->
+    <div class="text-center mt-4">
+      <img src="gambar/tiket grub.jpeg" alt="Tiket Spesial"
+           class="mx-auto w-full h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-300">
+      <div class="mt-6">
+        <h2 class="text-lg font-semibold text-gray-800">Ticket Grub</h2>
+        <p class="text-gray-600">$ 800.000</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+   <section id="contact"></section>
+  <section class="contact-container">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="contact-box">
+        <!-- Contact Content: Left (Admin Info + Image) and Right (Form) -->
+        <div class="flex">
+          <!-- Left side: Contact Info + Image -->
+          <div class="contact-left">
+            <img src="gambar/gambar contact.jpeg" alt="Admin Photo">
+            <h2>Contact Us</h2>
+            <p><strong>Admin Name:</strong> Elena Gabriella Clarissa</p>
+            <p><strong>Email:</strong> elena228@gmail.com</p>
+            <p><strong>Phone/WA:</strong> 089123456789</p>
+            <p><strong>Operating Hours:</strong> Monday-Saturday,09:00-17:00 WIB</p>
+          </div>
+
+          <!-- Right side: Send Message Form -->
+          <div class="contact-right">
+            <h3>Send Message</h3>
+            <form id="contact-form" action="#" method="POST">
+              <input type="text" id="name" name="name" placeholder="Your Name" class="form-input" required>
+              <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required>
+              <input type="tel" id="phone" name="phone" placeholder="Your Phone" class="form-input" required>
+              <textarea id="message" name="message" placeholder="Write your message" class="form-textarea" required></textarea>
+              <button type="submit" class="form-button">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer bg-gradient-custom text-white py-16">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+        <!-- Concert Venue 2025 -->
+        <div class="footer-item">
+          <h3 class="footer-title text-xl font-semibold mb-4">Concert Venue 2025</h3>
+          <p class="footer-text text-white-400">Experience the magic of Mahalini's voice live at this 
+          year's spectacular concert. Don't miss this historic moment!</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-item">
+          <h3 class="footer-title text-xl font-semibold mb-4">Navigation</h3>
+          <ul class="footer-links space-y-3">
+            <li><a href="#home" class="text-white-400 hover:text-pink-300">Home</a></li>
+            <li><a href="#about" class="text-white-400 hover:text-pink-300">About</a></li>
+            <li><a href="#ticket" class="text-white-400 hover:text-pink-300">Tickets</a></li>
+            <li><a href="#contact" class="text-white-400 hover:text-pink-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Policies and Terms -->
+        <div class="footer-item">
+          <h3 class="footer-title text-xl font-semibold mb-4">Policies & Terms</h3>
+          <ul class="footer-links space-y-3">
+            <li><a href="#" class="text-white-400 hover:text-pink-300">Privacy Policy</a></li>
+            <li><a href="#" class="text-white-400 hover:text-pink-300">Terms of Service</a></li>
+            <li><a href="#" class="text-white-400 hover:text-pink-300">Refund Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer-item">
+          <h3 class="footer-title text-xl font-semibold mb-4">Follow Us</h3>
+          <div class="space-y-4">
+            <!-- Instagram Link -->
+            <a href="#" class="flex items-center space-x-2 bg-pink-300 text-white py-2 px-4 rounded-lg hover:bg-pink-400 transition duration-300">
+              <img src="gambar/logo instagram.webp" alt="Instagram" class="w-8 h-8 object-contain">
+              <span>Instagram</span>
+            </a>
+            <!-- TikTok Link -->
+            <a href="#" class="flex items-center space-x-2 bg-pink-300 text-white py-2 px-4 rounded-lg hover:bg-pink-400 transition duration-300">
+              <img src="gambar/logo tik tok.png" alt="TikTok" class="w-8 h-8 object-contain">
+              <span>TikTok</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center mt-12 text-gray-400">
+        <p>&copy; 2025 Concert Website. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
