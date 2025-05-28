@@ -1,0 +1,129 @@
+/* Custom styles for the contact section */
+.contact-container {
+  background-color: #f472b6; /* Pink background */
+  padding: 40px 0;
+}
+
+.contact-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-box .flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+}
+
+.contact-left img {
+  width: 200px; /* Gambar lebih besar */
+  height: 200px; /* Gambar lebih besar */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-left: 100px; /* Menambahkan jarak lebih besar agar gambar lebih ke kanan */
+}
+
+.contact-left h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-left p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.contact-right h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.form-textarea {
+  height: 120px;
+  resize: none;
+}
+
+.form-button {
+  padding: 12px 24px;
+  background-color: #f472b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #d5007f;
+}
+
+
+
+/* Background gradasi dengan pink di atas, abu-abu di tengah, dan hitam di bawah */
+.footer {
+  background-image: linear-gradient(to bottom, #f472b6, #82858c, #000000); /* Gradasi pink, abu-abu, hitam */
+}
+
+/* Optional: Style for the footer item titles */
+.footer-title {
+  font-size: 1.125rem; /* Font size for the title */
+}
+
+.footer-text {
+  font-size: 1rem; /* Font size for the text */
+}
+
+.footer-links a {
+  font-size: 0.875rem; /* Font size for the links */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Add hover effect for links */
+.footer-links a:hover {
+  color: #f472b6;
+}
+
+/* Style for the 'Follow Us' section, making icons and text line up well */
+.footer-item .flex {
+  gap: 1.5rem; /* Adds space between Instagram and TikTok */
+}
+
+/* Ensure icons and text are aligned horizontally */
+.footer-item .flex.items-center {
+  display: flex;
+  align-items: center;
+}
+
+/* Optional: Style for the buttons (Instagram, TikTok) */
+.footer-item a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-item .space-x-2 a {
+  margin-bottom: 16px;
+}
